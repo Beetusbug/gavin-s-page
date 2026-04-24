@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gavin Reed | Personal Page</title>
+    <style>
+      :root {
+        --bg: #f7e9fb;
+        --surface: rgba(255, 255, 255, 0.85);
+        --surface-strong: rgba(255, 255, 255, 0.96);
+        --text: #3b3153;
+        --accent-pink: #ffa4d9;
+        --accent-blue: #a9d8ff;
+        --shadow: 0 18px 50px rgba(144, 106, 169, 0.12);
+        --radius: 28px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Inter, "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top left, #ffe6f5 0%, #f5e8ff 40%, #d4f1ff 100%);
+        color: var(--text);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(circle at 20% 20%, rgba(255, 164, 217, 0.28), transparent 22%),
+          radial-gradient(circle at 80% 15%, rgba(169, 216, 255, 0.32), transparent 18%),
+          radial-gradient(circle at 40% 75%, rgba(255, 255, 255, 0.22), transparent 25%);
+        pointer-events: none;
+      }
+
+      .page {
+        position: relative;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 40px 24px 60px;
+      }
+
+      .hero {
+        background: var(--surface);
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(14px);
+        padding: 44px 40px;
+      }
+
+      .hero h1 {
+        margin: 0 0 16px;
+        font-size: clamp(2.4rem, 4vw, 4rem);
+        letter-spacing: -0.04em;
+      }
+
+      .hero p {
+        line-height: 1.75;
+        font-size: 1.05rem;
+        max-width: 720px;
+      }
+
+      .highlight {
+        color: #905bc1;
+        font-weight: 700;
+      }
+
+      .section {
+        margin-top: 36px;
+      }
+
+      .section-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0 0 18px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .section-title::before {
+        content: "♥";
+        color: var(--accent-pink);
+      }
+
+      .card {
+        display: grid;
+        gap: 16px;
+        padding: 28px;
+        background: var(--surface-strong);
+        border-radius: 26px;
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        box-shadow: var(--shadow);
+      }
+
+      .grid {
+        display: grid;
+        gap: 24px;
+      }
+
+      .info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 10px;
+      }
+
+      .info-list li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.82));
+        border: 1px solid rgba(255, 165, 217, 0.3);
+      }
+
+      .info-label {
+        font-weight: 700;
+        min-width: 110px;
+        color: #7c5a8f;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      .pill-pink {
+        background: rgba(255, 164, 217, 0.24);
+        color: #b5337d;
+      }
+
+      .pill-blue {
+        background: rgba(169, 216, 255, 0.28);
+        color: #0f4e9b;
+      }
+
+      .footer {
+        margin-top: 44px;
+        text-align: center;
+        font-size: 0.95rem;
+        color: #6d5f7a;
+      }
+
+      @media (max-width: 720px) {
+        .hero,
+        .card {
+          padding: 28px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <section class="hero">
+        <h1>Gavin Reed</h1>
+        <p>
+          Hi! I&apos;m Gavin, a <span class="highlight">Computer Science major</span> at Xavier University preparing to graduate with a
+          <strong>Bachelor of Science in Computer Science</strong>. I build simple, thoughtful pages like this one as I explore
+          design, development, and the next steps in my career.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="section-title">About Me</div>
+        <div class="card">
+          <p>
+            I enjoy creating polished, soft-colored web experiences with a calm, candy-inspired palette. My interests include
+            playing guitar, staying active with fitness, and unwinding with video games. I like to combine technical skill with
+            everyday creativity.
+          </p>
+          <ul class="info-list">
+            <li><span class="info-label">School</span> Xavier University</li>
+            <li><span class="info-label">Major</span> Computer Science</li>
+            <li><span class="info-label">Degree</span> B.S. in CS</li>
+            <li><span class="info-label">Interests</span> <span class="pill pill-pink">Guitar</span> <span class="pill pill-blue">Fitness</span> <span class="pill pill-pink">Video Games</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Skills & Focus</div>
+        <div class="card grid">
+          <div>
+            <h2 style="margin: 0 0 10px; font-size: 1.1rem; color: #53386a;">Front-end Design</h2>
+            <p style="margin: 0; line-height: 1.7;">Creating clean, responsive layouts with subtle gradients, rounded shapes, and pastel accents.</p>
+          </div>
+          <div>
+            <h2 style="margin: 0 0 10px; font-size: 1.1rem; color: #53386a;">Problem Solving</h2>
+            <p style="margin: 0; line-height: 1.7;">Developing code with clarity, practicing logic, and exploring practical software design patterns.</p>
+          </div>
+          <div>
+            <h2 style="margin: 0 0 10px; font-size: 1.1rem; color: #53386a;">Creative Interests</h2>
+            <p style="margin: 0; line-height: 1.7;">Blending technology with hobbies like music and fitness to keep learning fun and balanced.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        Designed by Gavin Reed · Xavier University · B.S. Computer Science
+      </footer>
+    </div>
+  </body>
+</html>
